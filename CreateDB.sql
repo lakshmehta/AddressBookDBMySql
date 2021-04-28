@@ -34,6 +34,6 @@ delete from AddressBook
 where first_name = 'Gaurabh' AND last_name = 'Butola';
 
 select * from AddressBook 
-where city = 'Ruderperyag';
+where city = 'Khandwa';
 select * from AddressBook 
-where state = 'UK';
+where state = 'MP';
