@@ -34,6 +34,15 @@ delete from AddressBook
 where first_name = 'Gaurabh' AND last_name = 'Butola';
 
 select * from AddressBook 
-where city = 'Ruderperyag';
+where city = 'Khandwa';
 select * from AddressBook 
-where state = 'UK';
+where state = 'MP';
+
+
+--[UC7]
+select city,COUNT(city) as total_count
+from AddressBook 
+group by city
+select state,COUNT(state) as total_count
+from AddressBook 
+group by state
