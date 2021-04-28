@@ -95,3 +95,62 @@ insert into PersonContactDetails(person_id, first_name, last_name, address, phon
 (5, 'Aman', 'Rawat', 'Pune', '1234567890', 'amanrawat122@gmail.com', 006, 1002, 01, 3),
 (6, 'Neha', 'Gupta', 'Bhopal', '0987654321', 'neha@gmail.com', 004, 1004, 03, 1),
 (7, 'Komal', 'Yadav', 'Khandwa', '1234509876', 'koma3@gmail.com', 003, 1005, 01, 1)
+
+
+
+
+select * from PersonContactDetails p inner join City c on 
+p.CityID = c.city_id inner join State s on 
+p.StateId = s.state_id inner join AddressBookData a on
+p.AddressBookID = a.addresbook_id inner join Type t on
+p.TypeID = t.book_type_id 
+
+
+select * from PersonContactDetails p inner join State s on 
+p.StateId = s.state_id inner join City c on 
+p.CityID = c.city_id inner join AddressBookData a on
+p.AddressBookID = a.addresbook_id inner join Type t on
+p.TypeID = t.book_type_id 
+where person_id = 7
+
+select * from PersonContactDetails p inner join City c on 
+p.CityID = c.city_id inner join State s on 
+p.StateId = s.state_id inner join AddressBookData a on
+p.AddressBookID = a.addresbook_id inner join Type t on
+p.TypeID = t.book_type_id 
+where person_id = 5
+
+select first_name, last_name from PersonContactDetails p inner join City c on 
+p.CityID = c.city_id inner join State s on 
+p.StateId = s.state_id inner join AddressBookData a on
+p.AddressBookID = a.addresbook_id inner join Type t on
+p.TypeID = t.book_type_id 
+where c.city_name = 'Mumbai' OR s.state_name = 'Bihar' 
+
+select count(person_id) from PersonContactDetails p inner join City c on 
+p.CityID = c.city_id inner join State s on 
+p.StateId = s.state_id inner join AddressBookData a on
+p.AddressBookID = a.addresbook_id inner join Type t on
+p.TypeID = t.book_type_id 
+where c.city_name = 'Mumbai' AND s.state_name = 'Bihar' 
+
+select * from PersonContactDetails p inner join City c on 
+p.CityID = c.city_id inner join State s on 
+p.StateId = s.state_id inner join AddressBookData a on
+p.AddressBookID = a.addresbook_id inner join Type t on
+p.TypeID = t.book_type_id 
+order by p.first_name, p.last_name  
+
+select count(person_id) from PersonContactDetails p inner join City c on 
+p.CityID = c.city_id inner join State s on 
+p.StateId = s.state_id inner join AddressBookData a on
+p.AddressBookID = a.addresbook_id inner join Type t on
+p.TypeID = t.book_type_id 
+where t.book_type_name = 'Family'
+
+select count(person_id) from PersonContactDetails p inner join City c on 
+p.CityID = c.city_id inner join State s on 
+p.StateId = s.state_id inner join AddressBookData a on
+p.AddressBookID = a.addresbook_id inner join Type t on
+p.TypeID = t.book_type_id 
+where t.book_type_name = 'Friends'
