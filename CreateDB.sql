@@ -28,3 +28,7 @@ select * from AddressBook
 update AddressBook
 set address = 'Kareli jana hai'
 where first_name = 'Laksh' AND last_name = 'Mehta' ;
+
+
+delete from AddressBook
+where first_name = 'Gaurabh' AND last_name = 'Butola';
