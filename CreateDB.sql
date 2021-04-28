@@ -37,3 +37,12 @@ select * from AddressBook
 where city = 'Khandwa';
 select * from AddressBook 
 where state = 'MP';
+
+
+--[UC7]
+select city,COUNT(city) as total_count
+from AddressBook 
+group by city
+select state,COUNT(state) as total_count
+from AddressBook 
+group by state
