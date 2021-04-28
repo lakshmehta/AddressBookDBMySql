@@ -23,3 +23,8 @@ insert into AddressBook values
 ('Saurabh','Sajwan',' ghantagher.','Kareli','MP',895761,'7856235620'),
 ('Gaurabh','Butola','kotewser.','Dehli','Delhi',895154,'9875141545');
 select * from AddressBook
+
+
+update AddressBook
+set address = 'Kareli jana hai'
+where first_name = 'Laksh' AND last_name = 'Mehta' ;
