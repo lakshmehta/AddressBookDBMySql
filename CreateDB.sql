@@ -1,0 +1,2 @@
+create database AddressBookSystemServiceDB
+use AddressBookSystemServiceDB
