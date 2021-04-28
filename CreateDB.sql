@@ -54,3 +54,26 @@ group by state
 select * from AddressBook 
 where city = 'Khandwa'
 order by first_name;
+
+
+--[UC9]
+
+Alter table Addressbook
+ADD addressbook_name varchar(20) not null default 'AddressBook'; 
+
+alter table Addressbook
+add addresd_type varchar(20) not null default 'friends';
+
+update Addressbook set state='MP' where city='Khandwa'
+
+update Addressbook set addressbook_name='Addressbook1' where city='Rishikesh'
+update Addressbook set addressbook_name='Addressbook2' where city='Ruderperyag'
+update Addressbook set addressbook_name='Addressbook3' where city='Devperyag'
+update Addressbook set addressbook_name='Addressbook4' where city='Kotdwar'
+update Addressbook set addressbook_name='Addressbook5' where city='Dehradun'
+select * from AddressBook
+update Addressbook set addresd_type='family' where last_name='Mehta'
+update Addressbook set addresd_type='profession' where last_name='Rawat'
+
+select first_name , last_name from Addressbook where addressbook_name='Addressbook5'
+select * from AddressBook where addresd_type='family'
